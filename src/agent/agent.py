@@ -6,9 +6,16 @@ import pandas as pd
 from typing import Dict, Any, Optional
 import logging
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.agents import AgentExecutor, create_react_agent
-from langchain.tools import Tool
-from langchain.prompts import PromptTemplate
+from langchain.agents import create_react_agent
+from langchain_core.prompts import PromptTemplate
+try:
+    from langchain.agents import AgentExecutor
+except ImportError:
+    from langchain_core.agents import AgentExecutor
+try:
+    from langchain.tools import Tool
+except ImportError:
+    from langchain_core.tools import Tool
 from src.agent.tools import AnalysisTools
 from src.rag.retriever import RAGRetriever
 
