@@ -1,3 +1,15 @@
+---
+title: AI-Powered Business Intelligence Agent
+emoji: 🤖
+colorFrom: blue
+colorTo: purple
+sdk: gradio
+sdk_version: "4.44.1"
+app_file: app.py
+pinned: false
+license: mit
+---
+
 # AI-Powered Business Intelligence Agent 🤖📊
 
 > An intelligent data analytics assistant powered by RAG, Vector Databases, and AI Agents that automatically performs exploratory data analysis and answers business questions in natural language.
