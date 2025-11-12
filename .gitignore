@@ -12,6 +12,7 @@ ENV/
 # Environment
 .env
 .env.local
+.streamlit/secrets.toml
 
 # Data
 data/uploads/*
@@ -49,5 +50,6 @@ build/
 
 *.py
 !app.py
+!streamlit_app.py
 !config.py
 !src/**/*.py
