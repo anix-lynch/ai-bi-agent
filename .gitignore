@@ -47,3 +47,7 @@ dist/
 build/
 *.egg-info/
 
+*.py
+!app.py
+!config.py
+!src/**/*.py
