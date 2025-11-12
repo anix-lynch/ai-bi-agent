@@ -1,0 +1,33 @@
+# Core AI & ML
+langchain==0.3.7
+langchain-google-genai==2.0.5
+langchain-community==0.3.7
+chromadb==0.5.23
+sentence-transformers==3.3.1
+
+# Data Processing
+pandas==2.2.3
+numpy==2.2.0
+scipy==1.15.0
+openpyxl==3.1.5
+
+# Database
+duckdb==1.1.3
+
+# Visualization
+matplotlib==3.10.0
+plotly==5.24.1
+seaborn==0.13.2
+
+# Web UI
+gradio==5.7.1
+
+# Utils
+python-dotenv==1.0.1
+pydantic==2.10.3
+pydantic-settings==2.6.1
+
+# Optional: OpenAI fallback
+# openai==1.57.0
+# langchain-openai==0.2.10
+
