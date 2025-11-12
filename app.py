@@ -315,11 +315,7 @@ with gr.Blocks(title="AI Business Intelligence Agent", theme=gr.themes.Soft()) a
 if __name__ == "__main__":
     logger.info("Starting AI Business Intelligence Agent...")
     logger.info(f"Using LLM: {settings.LLM_MODEL}")
-    logger.info(f"Port: {settings.APP_PORT}")
     
-    demo.launch(
-        server_name="0.0.0.0",
-        server_port=settings.APP_PORT,
-        share=False
-    )
+    # Launch with HuggingFace Spaces compatible settings
+    demo.launch()
 
