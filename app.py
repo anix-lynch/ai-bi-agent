@@ -184,12 +184,6 @@ def create_visualization(viz_type: str, column1: str, column2: str = None):
         logger.error(f"Error creating visualization: {str(e)}")
         return None, f"❌ Error: {str(e)}"
 
-def get_column_list() -> list:
-    """Get list of columns"""
-    if app_state.df is not None:
-        return app_state.df.columns.tolist()
-    return []
-
 # Create Gradio interface
 with gr.Blocks(title="AI Business Intelligence Agent", theme=gr.themes.Soft()) as demo:
     gr.Markdown("""
@@ -251,6 +245,7 @@ with gr.Blocks(title="AI Business Intelligence Agent", theme=gr.themes.Soft()) a
     
     with gr.Tab("📊 Visualizations"):
         gr.Markdown("### Create visualizations")
+        gr.Markdown("⚠️ Upload data first, then manually type the column name")
         
         with gr.Row():
             viz_type = gr.Dropdown(
@@ -260,15 +255,12 @@ with gr.Blocks(title="AI Business Intelligence Agent", theme=gr.themes.Soft()) a
             )
         
         with gr.Row():
-            col1 = gr.Dropdown(label="Column 1", choices=[], interactive=True)
-            col2 = gr.Dropdown(label="Column 2 (for scatter)", choices=[], interactive=True)
+            col1 = gr.Textbox(label="Column 1", placeholder="Enter column name")
+            col2 = gr.Textbox(label="Column 2 (for scatter)", placeholder="Enter column name")
         
         viz_btn = gr.Button("Create Visualization", variant="primary")
         viz_output = gr.Plot()
         viz_status = gr.Markdown()
-        
-        # Update column choices when data is loaded
-        demo.load(fn=get_column_list, outputs=[col1, col2])
         
         viz_btn.click(
             fn=create_visualization,
