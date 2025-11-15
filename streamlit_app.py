@@ -228,19 +228,39 @@ with tab4:
     - **Data Analysis with Spreadsheets and SQL** - Data manipulation
     - **Introduction to Data Analytics** - Analytics fundamentals
     
-    ### 🛠️ Tech Stack
-    - **LLM:** Google Gemini (FREE tier)
-    - **Vector DB:** ChromaDB (local)
-    - **Framework:** LangChain
-    - **Embeddings:** Sentence Transformers (FREE)
-    - **UI:** Streamlit
+    ### 🛠️ Premium Tech Stack
     
-    ### 🚀 Features
-    - Natural language queries
-    - Automated statistical analysis
-    - RAG-powered context retrieval
-    - Interactive visualizations
-    - AI agent with multiple tools
+    **AI & LLM:**
+    - 🤖 **Google Gemini** (LLM - FREE tier)
+    - 🧠 **LangChain** (RAG orchestration & agent framework)
+    - 🔗 **Chain-of-Thought Reasoning** (Complex query handling)
+    
+    **Vector & Semantic Search:**
+    - 🎯 **ChromaDB** (Vector database - local, persistent)
+    - 📊 **Sentence Transformers** (Embeddings - FREE)
+    - 🔍 **Semantic Search** (RAG retrieval engine)
+    
+    **Data Science & Analytics:**
+    - 🐼 **Pandas** (Data manipulation & processing)
+    - 📈 **Plotly** (Interactive visualizations)
+    - 🔬 **SciPy** (Statistical testing)
+    - 📉 **NumPy** (Numerical computing)
+    - 📊 **DuckDB** (SQL analytics)
+    
+    **UI & Deployment:**
+    - 🎨 **Streamlit** (Interactive web interface)
+    - ☁️ **Streamlit Cloud** (Serverless deployment)
+    - 🎭 **Custom CSS/HTML** (Responsive design)
+    
+    ### 🚀 Advanced Features
+    - 💬 **Multi-turn Conversations** - Remember context across questions
+    - 🤖 **AI Agent System** - Automatically selects best analysis tools
+    - 📚 **RAG Pipeline** - Retrieves relevant data context for answers
+    - 🔬 **Statistical Analysis** - Hypothesis testing, correlation, regression
+    - 📊 **Interactive Visualizations** - Distribution, heatmap, scatter, box plots
+    - 🎯 **Natural Language to SQL** - Convert questions to queries
+    - 🧹 **Auto Data Cleaning** - Handle missing values and anomalies
+    - 💾 **Persistent Vector Store** - Reuse embeddings across sessions
     
     ---
     **Author:** Anix Lynch | [Portfolio](https://gozeroshot.dev) | [GitHub](https://github.com/anixlynch)
