@@ -45,15 +45,16 @@ class DataLoader:
             if ext not in self.SUPPORTED_FORMATS:
                 return None, f"Unsupported format. Supported: {', '.join(self.SUPPORTED_FORMATS)}"
             
-            # Load based on extension
+            # Load based on extension (handle both file path and UploadedFile)
+            # For UploadedFile, pandas functions work with file-like objects
             if ext == '.csv':
-                df = pd.read_csv(file_path)
+                df = pd.read_csv(file_path_or_object)
             elif ext in ['.xlsx', '.xls']:
-                df = pd.read_excel(file_path)
+                df = pd.read_excel(file_path_or_object)
             elif ext == '.parquet':
-                df = pd.read_parquet(file_path)
+                df = pd.read_parquet(file_path_or_object)
             elif ext == '.json':
-                df = pd.read_json(file_path)
+                df = pd.read_json(file_path_or_object)
             else:
                 return None, f"Unsupported file type: {ext}"
             
