@@ -74,7 +74,7 @@ with st.sidebar:
             with st.spinner("Loading and processing data..."):
                 # Load file
                 loader = DataLoader(max_size_mb=settings.MAX_FILE_SIZE_MB)
-                df, error = loader.load_file(uploaded_file.name)
+                df, error = loader.load_file(uploaded_file)
                 
                 if error:
                     st.error(f"❌ Error: {error}")

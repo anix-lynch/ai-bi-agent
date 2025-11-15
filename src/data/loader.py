@@ -18,7 +18,7 @@ class DataLoader:
         self.max_size_mb = max_size_mb
         self.max_size_bytes = max_size_mb * 1024 * 1024
     
-    def load_file(self, file_path: str) -> Tuple[Optional[pd.DataFrame], Optional[str]]:
+    def load_file(self, file_path_or_object) -> Tuple[Optional[pd.DataFrame], Optional[str]]:
         """
         Load data from file
         
