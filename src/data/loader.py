@@ -29,11 +29,11 @@ class DataLoader:
             Tuple of (DataFrame, error_message)
         """
         try:
-            path = Path(file_path)
+            path = Path(file_path_or_object)
             
             # Check file exists
             if not path.exists():
-                return None, f"File not found: {file_path}"
+                return None, f"File not found: {file_path_or_object}"
             
             # Check file size
             file_size = path.stat().st_size
